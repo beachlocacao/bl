@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Locação Apartamentos e Casa Cumbuco</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/media/favicon.png" type="image/x-icon">
+
+    <!-- Favicon -->
+    <script src="https://kit.fontawesome.com/344589b924.js" crossorigin="anonymous"></script>
+
+    <!-- Semantic UI CDN -->
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+    
+
+
+
+ 
+
+body {
+  font-family: Arial, sans-serif;
+ 
+}
+
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  
+}
+
+/* Colunas com float */
+.gallery {
+  width: 66%;
+  float: left;
+  padding-right: 1rem;
+}
+
+.card {
+  width: 32%;
+  float: right;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-height: 520px;
+  overflow-y: auto;
+  min-width: 280px;
+}
+
+/* Limpa o float */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gallery-item {
+  margin-bottom: 1.2rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+.card h2 {
+  margin-top: 0;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.features li::before {
+  content: '✓';
+  margin-right: 8px;
+  color: green;
+}
+
+.payments {
+  margin-top: 1rem;
+}
+
+.payments img {
+  width: 35px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+button {
+  margin-top: 1rem;
+  background: #f8ac3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+ 
+}
+
+button:hover {
+  background: #30343c;
+  color: #f8ac3c;
+  font-size: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .gallery,
+  .card {
+    width: 100%;
+    float: none;
+    padding: 0;
+    max-height: none;
+  }
+
+
+
+@media (max-width: 480px) {
+  header {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+
+</style>
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+</head>
+<body>
+
+       <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+   <!-- Header Navigation -->
+   <nav>
+    <div class="container">
+    <div class="row">
+    <header class="header">
+        <div class="header-left">
+            <a href="../index.html">
+                <img class="logo" src="../assets/media/logo.png" alt="grh-logo">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <div class="nav-menu" id="navi-menu">
+            <ul class="nav-items">
+                <li class="list-items" ><a class="header-link" class="fab fa-instagram"href="../index.html">Home</a></li>
+                <li class="list-items"><a class="header-link" href="../rooms.html">Apartamentos & Casas</a></li>
+                <!--<li class="list-items"><a class="header-link" href="./about.html">Sobre</a></li>
+                <li class="list-items"><a class="header-link" href="./gallery.html">Galeria</a></li>
+                <li class="list-items"><a class="header-link" href="./amenities.html">Locais</a></li>-->
+                <li class="list-items"><a class="header-link" onclick="window.location.href = 'https://wa.me/5585986772150?text=Estou%20Com%20D%C3%BAvidas%20Sobre%20O%20Beach%20Loca%C3%A7%C3%A3o'">Tire Suas Dúvidas</a></li>
+                
+            </ul>
+            <div class = "vertical"></div>
+          <a href="https://www.instagram.com/beach_locacao"><img width="60" src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="home-abt-img"></a> 
+
+
+            </div>
+        
+        
+       
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="hamburger">
+            <i id="openMenu" class="fa-solid fa-bars fa-2xl" style="color: #2c333d;"></i>
+            <i id="closeMenu" class="hide fa-solid fa-x fa-2xl " style="color: #2c333d;"></i>
+        </div>
+        </div>
+    </header>
+    </div>
+    </div>
+</nav>
+   <!-- End Header -->
+
+  <!-- Breadcrumb -->
+<section class="breadcrumb-section">
+    <div>
+        <div class="row" id="breadcrumb-row">
+            <div >
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Breadcrumb -->
+
+
+<!-- End Breadcrumb -->
+<br><br>
+<center> <h2 class="header-h2 header-text">Varandas do Mar</h2></center>
+
+<br><br><br>
+
+<div class="container">
+    <!-- Galeria com legendas -->
+    <div class="gallery">
+
+      <!-- Quartos -->
+      <div class="gallery-item">
+
+         <div class="caption"><h2> Sala de Estar</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/334b3013-d0c5-4b5a-9118-a4d4a32bf4d6.jpeg" >
+
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/9718db96-dd37-445a-83b4-8e04e7cb864c.jpeg" >
+
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/f05f473f-8f0f-45bb-b418-f616bce2e2f9.jpeg">
+       
+      </div>
+      <div class="gallery-item"> <div class="caption"><h2>Cozinha Completa</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/6957ff72-b442-49fc-a5a3-fa099aeca5dc.jpeg" >
+
+         <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/7d1079d0-b5a3-40e2-96c1-6c63c4d86597.jpeg" >
+
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/339be4e6-de33-401f-9b74-70a26a634494.jpeg" >
+       
+      </div>
+
+      <!-- Banheiros -->
+      <div class="gallery-item"><div class="caption"><h2>Área de Jantar</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/32269082-e6f3-4f00-b61c-87febea5c2cf.jpeg" >
+
+<img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/d019bd17-c871-449d-9734-be5c50316129.jpeg" >
+
+
+<img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/ec19eda0-3915-41d4-8cac-1008f9b361f3.jpeg" >
+
+    
+      </div>
+      <div class="gallery-item"><div class="caption"><h2>Primeiro Quarto Com Uma Cama Queen e Cama de Solteiro</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/6eb7d261-a20e-48f0-b2c4-2051e92565b2.jpeg">
+
+        
+
+              <img src="https://a0.muscache.com/im/pictures/5e6bd699-4a25-4733-b482-1b0c4e662f12.jpg">
+
+               <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/bdb63f9f-e83c-4efc-a909-8d8d92057c98.jpeg">
+                   <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/6abef8c9-14f5-452d-8b42-d1560486270f.jpeg">
+
+                 
+        
+      </div>
+
+      <!-- Cozinha -->
+      <div class="gallery-item"><div class="caption"><h2>Segundo Quarto 
+2 Camas de Solteiro</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/971699c8-c821-4526-a12a-ddf82b82d17d.jpeg">
+
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/cbd5f2c1-bdf6-43ba-a52b-dc41c56d19be.jpeg">
+
+
+             
+        
+      </div>
+      <div class="gallery-item">  <div class="caption"><h2>Banheiro Completo 1
+Condicionador, Xampu, Água Quente</h2></div><br>
+         <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/9d95d035-6011-45f3-8a9e-c387ba8c8f4c.jpeg">
+       
+      </div>
+
+ <div class="gallery-item">  <div class="caption"><h2>Banheiro Completo 2
+Condicionador, Xampu, Água Quente</h2></div><br>
+         <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/4caf1a61-5535-42b7-a8fa-c8e0cc4a13be.jpeg">
+       
+      </div>
+
+    
+      <div class="gallery-item">  <div class="caption"><h2>Pátio</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/1c7c5a08-b7eb-478d-a1e1-cae44a5efdbb.jpeg">
+
+         <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/e6edb2ed-8ff6-4d43-903c-d71cafba0ab0.jpeg">
+      
+ <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/eec52bd5-407a-4a78-8338-b3eab9a14cf5.jpeg">
+      
+       <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/8842365f-d0e2-44f3-bb45-85207fce810e.jpeg">
+
+ <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/8c8eba74-ec5d-4de8-bb0a-81d3e3d13995.jpeg">
+
+     <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/eb507669-5c7f-4b3b-ad12-9f9dba9bb21d.jpeg">
+      </div>
+
+
+
+      <!-- Varanda -->
+      <div class="gallery-item"> <div class="caption"><h2>Varanda</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/8b82161f-9fac-4b8e-ac9e-33dd5151793f.jpeg">
+
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/df0a1250-c3d1-4f3a-98e1-818178bdaba7.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzkzNjY0OTc%3D/original/bdd589e0-e61c-4cd9-b0d6-3f4827033a2b.jpeg">
+       
+      </div>
+      <div class="gallery-item"><div class="caption"><h2>Exterior</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/0efb9d7c-1464-470a-8f1e-72e6de558e99.jpg">
+        
+      </div>
+
+      <!-- Sala -->
+      <div class="gallery-item"> <div class="caption"><h2>Piscina</h2></div><br>
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-39366497/original/4c28b03e-2cfd-412d-b81b-53c678e08e25.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/fc0208b1-4e54-4784-a888-fe542f0d9e30.jpg">
+        <img src="https://a0.muscache.com/im/pictures/2a8e8e22-a31d-4452-ac69-8b69556d3fd3.jpg">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-39366497/original/2981480e-719a-4aa9-b7d7-f937155aaeb9.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-39366497/original/fb99a446-7990-4c3f-9ba1-9b16560f55ec.jpeg">
+
+      </div>
+    </div>
+
+
+
+
+ 
+
+    <!-- Card de reserva -->
+    <div class="card">
+     <h2>Preço R$ 350 a 500 a Diária</h2>
+
+      <div class="features">
+        <h3>O que o apartamento oferece:</h3>
+        <ul>
+          <li>Ar-Condicionado</li>
+          <li>TV Smart 42</li>
+          <li>Wi-Fi</li>
+          <li>Geladeira</li>
+          <li>Cama</li>
+          <li>Banheiro</li>
+          <li>Acesso à Praia</li>
+          <li>Cozinha</li>
+          <li>Piscina</li>
+          <li>Varanda com vista</li>
+        </ul>
+      </div>
+
+      <div class="payments">
+        <h3>Pagamentos aceitos:</h3>
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa"/>
+        <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard"/>
+        <img src="https://img.icons8.com/color/48/pix.png" alt="Pix"/>
+      </div>
+
+      <button onclick="window.location.href = 'https://wa.me/5585986772150?text=Quero%20Reservar%20Agora%20O%20Varandas%20do%20Mar'">Reservar</button>
+    </div>
+  </div>
+
+
+    <!-- Footer -->
+   <footer class="footer">
+       <div class="row" id="copyright-row">
+               <center>
+                    <p class="copyright-text"> ©
+                      <span id="year"></span> Todos Os Direitos Reservados.<br> Feito Por <a class="footer-link" href="https://wa.me/5588994625094?text=Eu%20Vim%20Pelo%20Site%20Beach%20Loca%C3%A7%C3%A3o%20Apartamentos%20e%20Casa%20Cumbuco" target="_blank">WillTech</a><a class="footer-link" href="https://wa.me/5588994625094?text=Vim%20Pelo%20Site%20Do%20Hotel" target="_blank"></a>
+                    </p>
+              </center>
+            </div>
+        </div>
+                </div>
+               
+               
+            <!-- copyright -->
+            
+   </footer>
+   <!-- Footer End -->
+
+   <!-- Back to top button -->
+<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    
+    <!-- JS -->
+   <script src="../assets/js/index.js"></script>
+
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
