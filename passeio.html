@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Locação Apartamentos e Casa Cumbuco</title>
+
+    <meta name = "keywords" content = "Gordon Resort Hotel Abraka, Gordon Resort Hotel, McCarthy Beach, Beaches in Delta state, Beaches in Nigeria, beaches in Africa, beaches near me" />
+    <meta name = "description" content = " A picture may be worth a thousand words, but personal experience has no limit. So, after you check out our handsome guestrooms, stunning beach, and other details of our hotel resort, make your plans to check-in and start experiencing abraka." />
+
+ <!-- Google tag (gtag.js) -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1EVRTK6PD"></script>
+     <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+ 
+     gtag('config', 'G-C1EVRTK6PD');
+     </script>
+ 
+     
+
+ <!-- Google Tag Manager -->
+ <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+ 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-NSMS76N');</script>
+ <!-- End Google Tag Manager -->
+                 
+ <!-- Bootstrap -->
+ <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+
+ <!-- Main CSS -->
+ <link rel="stylesheet" href="./assets/css/style.css">
+
+
+
+ <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+     
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+     
+      font-size: 2rem;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 700px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: cover;
+     
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #222;
+    }
+
+    .card-content p {
+      font-size: 1.05rem;
+      color: #555;
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #f8ac3c;
+      color: #30343c;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #30343c;
+      color: #f8ac3c;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .card-content h3 {
+        font-size: 1.4rem;
+      }
+
+      .card-content p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .card-content h3 {
+        font-size: 1.2rem;
+      }
+
+      .card-content p {
+        font-size: 0.95rem;
+      }
+    }
+
+
+  
+
+  
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px 5%;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
+
+    .contato {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #fff;
+      
+    }
+
+    .contato h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .contato p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1dbd5b;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .fechar, .seta {
+      position: absolute;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .fechar {
+      top: 20px;
+      right: 30px;
+    }
+
+    .seta {
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 60px;
+    }
+
+    .anterior {
+      left: 30px;
+    }
+
+    .proxima {
+      right: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .contato h2 {
+        font-size: 1.5rem;
+      }
+
+      .whatsapp-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+
+      .seta {
+        font-size: 40px;
+      }
+
+      .fechar {
+        font-size: 30px;
+        top: 15px;
+        right: 20px;
+      }
+    }
+  </style>
+
+
+ <!-- Favicon -->
+ <link rel="shortcut icon" href="./assets/media/favicon.png" type="image/x-icon">
+
+ <!-- Favicon -->
+ <script src="https://kit.fontawesome.com/344589b924.js" crossorigin="anonymous"></script>
+
+ <!-- Semantic UI CDN -->
+ <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+
+ <!-- Jquery -->
+ <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+ <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+</head>
+<body>
+ <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+<body>
+
+    <!-- Loader -->
+    <!-- <div class="loader-div" id="loader-div">
+        <div class="spinner">
+        </div>
+    </div> -->
+
+    <!-- End Loader -->
+
+ <!-- Header Navigation -->
+   <nav>
+    <div class="container">
+    <div class="row">
+    <header class="header">
+        <div class="header-left">
+            <a href="./index.html">
+                <img class="logo" src="./assets/media/logo.png" alt="grh-logo">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <div class="nav-menu" id="navi-menu">
+            <ul class="nav-items">
+                  <li class="list-items" ><a class="header-link" class="fab fa-instagram"href="./index.html">Home</a></li>
+                <li class="list-items"><a class="header-link" href="./rooms.html">Apartamentos & Casas</a></li>
+                <li class="list-items"><a class="header-link" href="./restaurante.html">Restaurante</a></li>
+                <li class="list-items"><a class="header-link" href="./barracadepraia.html">Barraca De Praia</a></li>
+                <li class="list-items"><a class="header-link" href="./passeio.html">Passeio</a></li>
+                <li class="list-items"><a class="header-link" href="./praiasproxima.html">Praias Próxima</a></li>
+                <li class="list-items"><a class="header-link" href="./escoladekitesurf.html">Escola De Kite Surf</a></li>
+                <li class="list-items"><a class="header-link" href="./supermercado.html">Supermercado</a></li>
+                <li class="list-items"><a class="header-link" onclick="window.location.href = 'https://wa.me/5585986772150?text=Estou%20Com%20D%C3%BAvidas%20Sobre%20O%20Beach%20Loca%C3%A7%C3%A3o'">Tire Suas Dúvidas</a></li>
+                
+            </ul>
+            <div class = "vertical"></div>
+          <a href="https://www.instagram.com/beach_locacao"><img width="60" src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="home-abt-img"></a> 
+
+
+            </div>
+        
+        
+       
+
+          
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="hamburger">
+            <i id="openMenu" class="fa-solid fa-bars fa-2xl" style="color: #2c333d;"></i>
+            <i id="closeMenu" class="hide fa-solid fa-x fa-2xl " style="color: #2c333d;"></i>
+        </div>
+        </div>
+    </header>
+    </div>
+    </div>
+</nav>
+   <!-- End Header -->
+
+
+<!-- Breadcrumb -->
+<section class="breadcrumb-section">
+    <div class="container" id="breadcrumb-cont">
+        <div class="row" id="breadcrumb-row">
+            <div class="col-12" id="breadcrumb-col">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Breadcrumb --><br><br>
+<center><h1 class="header-h2">Galeria de Passeios</h1></center>
+             
+
+  <div class="card-container" id="restaurantCards">
+    <!-- Os cards serão inseridos aqui via JavaScript -->
+  </div>
+<br>  
+<header>
+   
+   <center><h3>Momentos inesquecíveis com a turma!</h3></center> 
+  </header>
+
+  <section class="galeria">
+    <img src="https://deferiasnoceara.com.br/wp-content/uploads/2021/08/De-Ferias-no-Ceara-Passeio-de-Buggy-Cumbuco-5.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/2023/04/Passeios-deBuggy-em-Cumbuco-01.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/2023/04/Passeios-deBuggy-em-Cumbuco-03.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/2023/04/Passeios-deBuggy-em-Cumbuco-10.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/2023/04/Passeios-deBuggy-em-Cumbuco-07.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/elementor/thumbs/Passeios-deBuggy-em-Cumbuco-12-q5gh9jza0tnhz9rpsjbb07mndh18vfxes37n0g5hds.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/elementor/thumbs/Passeios-deBuggy-em-Cumbuco-04-q5gh8zatugv6vulr5adihcuiazv663nbd8uygd056o.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/elementor/thumbs/Passeios-deBuggy-em-Cumbuco-06-q5gh9400sn1mhwexduenbtnt9x808l5z1w4duqt6bk.jpg">
+    <img src="https://portalcumbuco.com.br/wp-content/uploads/elementor/thumbs/Passeios-deBuggy-em-Cumbuco-02-q5gh8ulmwaor9sskwqcdmw17c2ic3m4nollj1z741s.jpg">
+  </section>
+
+  <section class="contato">
+    <h2>Quer participar do próximo passeio?</h2>
+    <h3>Fale agora com Aline Turismo:</h3><br>
+    <a class="whatsapp-btn" href="https://wa.me/5585996582377?text=Quero%20Passear%20de%20Buggy" target="_blank">Chamar no WhatsApp</a>
+  </section>
+
+  <!-- Modal com navegação -->
+  <div class="modal" id="modal">
+    <span class="fechar" onclick="fecharModal()">×</span>
+    <span class="seta anterior" onclick="mudarImagem(-1)">❮</span>
+    <img id="modal-img" src="" alt="Imagem ampliada">
+    <span class="seta proxima" onclick="mudarImagem(1)">❯</span>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const imagens = document.querySelectorAll(".galeria img");
+    let indexAtual = 0;
+
+    imagens.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        indexAtual = index;
+        abrirModal(indexAtual);
+      });
+    });
+
+    function abrirModal(index) {
+      modal.style.display = "flex";
+      modalImg.src = imagens[index].src;
+      modalImg.alt = imagens[index].alt;
+    }
+
+    function fecharModal() {
+      modal.style.display = "none";
+      modalImg.src = "";
+    }
+
+    function mudarImagem(direcao) {
+      indexAtual += direcao;
+
+      if (indexAtual < 0) {
+        indexAtual = imagens.length - 1;
+      } else if (indexAtual >= imagens.length) {
+        indexAtual = 0;
+      }
+
+      abrirModal(indexAtual);
+    }
+
+    // Fecha ao clicar fora da imagem
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        fecharModal();
+      }
+    });
+
+    // Navegação com teclado ← →
+    document.addEventListener("keydown", (e) => {
+      if (modal.style.display === "flex") {
+        if (e.key === "ArrowRight") mudarImagem(1);
+        if (e.key === "ArrowLeft") mudarImagem(-1);
+        if (e.key === "Escape") fecharModal();
+      }
+    });
+  </script>
+
+
+</body>
+    <!-- Footer -->
+   <footer class="footer">
+       <div class="row" id="copyright-row">
+               <center>
+                    <p class="copyright-text"> ©
+                      <span id="year"></span> Todos Os Direitos Reservados.<br> Feito Por <a class="footer-link" href="https://wa.me/5588994625094?text=Eu%20Vim%20Pelo%20Site%20Beach%20Loca%C3%A7%C3%A3o%20Apartamentos%20e%20Casa%20Cumbuco" target="_blank">WillTech</a><a class="footer-link" href="https://wa.me/5588994625094?text=Vim%20Pelo%20Site%20Do%20Hotel" target="_blank"></a>
+                    </p>
+              </center>
+            </div>
+        </div>
+                </div>
+            
+   </footer>
+   <!-- Footer End -->
+
+   <!-- Back to top button -->
+<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    
+    <!-- JS -->
+   <script src="./assets/js/index.js"></script>
+
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
+
+  
+</body>
+</html>
