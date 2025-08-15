@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Locação Apartamentos e Casa Cumbuco</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/media/favicon.png" type="image/x-icon">
+
+    <!-- Favicon -->
+    <script src="https://kit.fontawesome.com/344589b924.js" crossorigin="anonymous"></script>
+
+    <!-- Semantic UI CDN -->
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+    
+
+
+
+ 
+
+body {
+  font-family: Arial, sans-serif;
+ 
+}
+
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  
+}
+
+/* Colunas com float */
+.gallery {
+  width: 66%;
+  float: left;
+  padding-right: 1rem;
+}
+
+.card {
+  width: 32%;
+  float: right;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-height: 520px;
+  overflow-y: auto;
+  min-width: 280px;
+}
+
+/* Limpa o float */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gallery-item {
+  margin-bottom: 1.2rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+
+.card h2 {
+  margin-top: 0;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.features li::before {
+  content: '✓';
+  margin-right: 8px;
+  color: green;
+}
+
+.payments {
+  margin-top: 1rem;
+}
+
+.payments img {
+  width: 35px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+button {
+  margin-top: 1rem;
+  background: #f8ac3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+ 
+}
+
+button:hover {
+  background: #30343c;
+  color: #f8ac3c;
+  font-size: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .gallery,
+  .card {
+    width: 100%;
+    float: none;
+    padding: 0;
+    max-height: none;
+  }
+
+
+
+@media (max-width: 480px) {
+  header {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+
+</style>
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+</head>
+<body>
+
+       <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+   <!-- Header Navigation -->
+   <nav>
+    <div class="container">
+    <div class="row">
+    <header class="header">
+        <div class="header-left">
+            <a href="../index.html">
+                <img class="logo" src="../assets/media/logo.png" alt="grh-logo">
+            </a>
+        </div>
+
+        <div class="header-right">
+            <div class="nav-menu" id="navi-menu">
+            <ul class="nav-items">
+                <li class="list-items" ><a class="header-link" class="fab fa-instagram"href="../index.html">Home</a></li>
+                <li class="list-items"><a class="header-link" href="../rooms.html">Apartamentos & Casas</a></li>
+                <li class="list-items"><a class="header-link" href="../restaurante.html">Restaurante</a></li>
+                <li class="list-items"><a class="header-link" href="../barracadepraia.html">Barraca De Praia</a></li>
+                <li class="list-items"><a class="header-link" href="../passeio.html">Passeio</a></li>
+                <li class="list-items"><a class="header-link" href="../praiasproxima.html">Praias Próxima</a></li>
+                <li class="list-items"><a class="header-link" href="../escoladekitesurf.html">Escola De Kite Surf</a></li>
+                <li class="list-items"><a class="header-link" href="../supermercado.html">Supermercado</a></li>
+                <li class="list-items"><a class="header-link" onclick="window.location.href = 'https://wa.me/5585986772150?text=Estou%20Com%20D%C3%BAvidas%20Sobre%20O%20Beach%20Loca%C3%A7%C3%A3o'">Tire Suas Dúvidas</a></li>
+                
+            </ul>
+            <div class = "vertical"></div>
+          <a href="https://www.instagram.com/beach_locacao"><img width="60" src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png" alt="home-abt-img"></a> 
+
+
+            </div>
+       
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="hamburger">
+            <i id="openMenu" class="fa-solid fa-bars fa-2xl" style="color: #2c333d;"></i>
+            <i id="closeMenu" class="hide fa-solid fa-x fa-2xl " style="color: #2c333d;"></i>
+        </div>
+        </div>
+    </header>
+    </div>
+    </div>
+</nav>
+   <!-- End Header -->
+
+  <!-- Breadcrumb -->
+<section class="breadcrumb-section">
+    <div>
+        <div class="row" id="breadcrumb-row">
+            <div >
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Breadcrumb -->
+
+
+<!-- End Breadcrumb -->
+<br><br>
+<center> <h2 class="header-h2 header-text">Casa Cumbuco</h2></center>
+
+<br><br><br>
+
+<div class="container">
+    <!-- Galeria com legendas -->
+    <div class="gallery">
+
+      <!-- Quartos -->
+      <div class="gallery-item">
+
+         <div class="caption"><h2>Área de Jantar</h2></div><br>
+        <img src="../assets/media/cc/1.jpg" >
+<img src="../assets/media/cc/2.jpg" >
+       
+       
+      </div>
+      <div class="gallery-item"> <div class="caption"><h2>Cozinha Completa</h2></div><br>
+       <img src="../assets/media/cc/22.jpg" >
+        <img src="../assets/media/cc/23.jpg" >
+
+        
+       
+      </div>
+
+
+ <div class="gallery-item"><div class="caption"><h2>Sala de Estar</h2></div><br>
+        <img src="../assets/media/cc/19.jpg" >
+      <img src="../assets/media/cc/20.jpg" >
+        <img src="../assets/media/cc/21.jpg" >
+                 
+        
+      </div>
+     
+      <div class="gallery-item"><div class="caption"><h2>Suítes</h2></div><br>
+        <img src="../assets/media/cc/4.jpg" >
+         <img src="../assets/media/cc/5.jpg" >
+          <img src="../assets/media/cc/6.jpg" >
+            
+
+      </div>
+
+      <!-- Cozinha -->
+      <div class="gallery-item"><div class="caption"><h2>Quartos</h2></div><br>
+        <img src="../assets/media/cc/12.jpg" >
+          <img src="../assets/media/cc/13.jpg" >
+
+
+      </div>
+     
+
+<!-- Varanda -->
+      <div class="gallery-item"> <div class="caption"><h2>Banheiros</h2></div><br>
+        <img src="../assets/media/cc/8.jpg" >
+        <img src="../assets/media/cc/11.jpg" >
+        <img src="../assets/media/cc/15.jpg" >
+        <img src="../assets/media/cc/16.jpg" >
+        <img src="../assets/media/cc/17.jpg" >
+       
+      </div>
+
+
+    
+      <div class="gallery-item">  <div class="caption"><h2>Piscina</h2></div><br>
+        <img src="../assets/media/cc/18.jpg" >
+      </div>
+
+
+
+      
+      <div class="gallery-item"><div class="caption"><h2>Exterior</h2></div><br>
+        <img src="../assets/media/cc/3.jpg" >
+        
+      </div>
+
+   </div>
+ 
+
+    <!-- Card de reserva -->
+    <div class="card">
+      <h2>Preço R$ 350 a 500 a Diária</h2>
+     
+      <div class="features">
+        <h3>O que o apartamento oferece:</h3>
+        <ul>
+          <li>Ar-Condicionado</li>
+          <li>TV Smart 42</li>
+          <li>Wi-Fi</li>
+          <li>Geladeira</li>
+          <li>Cama</li>
+          <li>Banheiro</li>
+          <li>Acesso à Praia</li>
+          <li>Cozinha</li>
+          <li>Piscina</li>
+          <li>Varanda com vista</li>
+        </ul>
+      </div>
+
+      <div class="payments">
+        <h3>Pagamentos aceitos:</h3>
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa"/>
+        <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard"/>
+        <img src="https://img.icons8.com/color/48/pix.png" alt="Pix"/>
+      </div>
+
+      <button onclick="window.location.href = 'https://wa.me/5585986772150?text=Quero%20Reservar%20Agora%20O%20%0ABeach%20Sun'">Reservar</button>
+    </div>
+  </div>
+
+
+    <!-- Footer -->
+   <footer class="footer">
+       <div class="row" id="copyright-row">
+               <center>
+                    <p class="copyright-text"> ©
+                      <span id="year"></span> Todos Os Direitos Reservados.<br> Feito Por <a class="footer-link" href="https://wa.me/5588994625094?text=Eu%20Vim%20Pelo%20Site%20Beach%20Loca%C3%A7%C3%A3o%20Apartamentos%20e%20Casa%20Cumbuco" target="_blank">WillTech</a><a class="footer-link" href="https://wa.me/5588994625094?text=Vim%20Pelo%20Site%20Do%20Hotel" target="_blank"></a>
+                    </p>
+              </center>
+            </div>
+        </div>
+                </div>
+               
+               
+            <!-- copyright -->
+            
+   </footer>
+   <!-- Footer End -->
+
+   <!-- Back to top button -->
+<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+    
+    <!-- JS -->
+   <script src="../assets/js/index.js"></script>
+
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
